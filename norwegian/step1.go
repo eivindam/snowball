@@ -42,9 +42,10 @@ func step1(w *snowballword.SnowballWord) bool {
 	// Remove the suffix
 	w.RemoveLastNRunes(len(suffixRunes))
 
-	suffix, suffixRunes = w.FirstSuffix(
-		"erte", "ert",
-	)
+	// replace "erte" and "ert" with "er"
+	suffixes = []string{ "erte", "ert" }
+
+	suffix, suffixRunes = w.FirstSuffixIn(w.R1start, len(w.RS), suffixes...)
 
 	// If it is not in R1, do nothing
 	if suffix == "" || len(suffixRunes) > len(w.RS)-w.R1start {
