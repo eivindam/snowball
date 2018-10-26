@@ -11,9 +11,9 @@ func step1(w *snowballword.SnowballWord) bool {
 
 	// Possible sufficies for this step, longest first.
 	suffixes := []string{
-		"a", "e", "ede", "ande", "ende", "ane", "ene", "hetene", "en", "heten",
-		"ar", "er", "heter", "as", "es", "edes", "endes", "enes", "hetenes",
-		"ens", "hetens", "ers", "ets", "et", "het", "ast",
+		"hetenes", "hetene", "hetens", "endes", "heter", "heten", "ende",
+		"ande", "edes", "enes", "ene", "ane", "ets", "ers", "ede", "ast",
+		"ens", "het", "as", "es", "er", "ar", "en", "et", "e", "a",
 	}
 
 	// Using FirstSuffixIn since there are overlapping suffixes, where some might not be in the R1,
