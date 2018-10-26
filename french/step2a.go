@@ -1,7 +1,7 @@
 package french
 
 import (
-	"github.com/kljensen/snowball/snowballword"
+	"github.com/emoland/snowball/snowballword"
 )
 
 // Step 2a is the removal of Verb suffixes beginning

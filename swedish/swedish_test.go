@@ -7,7 +7,7 @@ package swedish
 import (
 	"testing"
 
-	"github.com/kljensen/snowball/snowballword"
+	"github.com/emoland/snowball/snowballword"
 )
 
 // Test stopWords for things we know should be true

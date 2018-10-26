@@ -9,8 +9,8 @@ package english
 import (
 	"testing"
 
-	"github.com/kljensen/snowball/romance"
-	"github.com/kljensen/snowball/snowballword"
+	"github.com/emoland/snowball/romance"
+	"github.com/emoland/snowball/snowballword"
 )
 
 // Test stopWords for things we know should be true

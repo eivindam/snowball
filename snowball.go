@@ -3,11 +3,11 @@ package snowball
 import (
 	"fmt"
 
-	"github.com/kljensen/snowball/english"
-	"github.com/kljensen/snowball/french"
-	"github.com/kljensen/snowball/russian"
-	"github.com/kljensen/snowball/spanish"
-	"github.com/kljensen/snowball/swedish"
+	"github.com/emoland/snowball/english"
+	"github.com/emoland/snowball/french"
+	"github.com/emoland/snowball/russian"
+	"github.com/emoland/snowball/spanish"
+	"github.com/emoland/snowball/swedish"
 )
 
 const (
