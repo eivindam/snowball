@@ -1,5 +1,5 @@
 /*
-	Herein lie all the tests of the Swedish snowball stemmer.
+	Herein lie all the tests of the norwegian snowball stemmer.
 	TODO
 */
 package norwegian

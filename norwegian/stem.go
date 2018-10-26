@@ -6,7 +6,7 @@ import (
 	"github.com/eivindam/snowball/snowballword"
 )
 
-// Stem a Swedish word. This is the only exported
+// Stem a Norwegian word. This is the only exported
 // function in this package.
 //
 func Stem(word string, stemStopwWords bool) string {

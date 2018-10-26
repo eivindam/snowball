@@ -9,12 +9,12 @@ import (
 //
 // R1 is the region after the first non-vowel following a vowel,
 // or is the null region at the end of the word if there is no
-// such non-vowel. R2 is not used in Swedish
+// such non-vowel. R2 is not used in Norwegian
 //
 // See http://snowball.tartarus.org/texts/r1r2.html
 //
 func r1(word *snowballword.SnowballWord) (r1start int) {
-	// Like the German R1, the length of the Swedish R1 is adjusted to be at least three.
+	// Like the German R1, the length of the Norwegian R1 is adjusted to be at least three.
 	r1start = romance.VnvSuffix(word, isLowerVowel, 0)
 	if r1start < 3 && len(word.RS) >= 3 {
 		r1start = 3
@@ -22,7 +22,7 @@ func r1(word *snowballword.SnowballWord) (r1start int) {
 	return
 }
 
-// Checks if a rune is a lowercase Swedish vowel.
+// Checks if a rune is a lowercase Norwegian vowel.
 //
 func isLowerVowel(r rune) bool {
 	switch r {
@@ -32,7 +32,7 @@ func isLowerVowel(r rune) bool {
 	return false
 }
 
-// Return `true` if the input `word` is a Swedish stop word.
+// Return `true` if the input `word` is a Norwegian stop word.
 //
 func isStopWord(word string) bool {
 	switch word {
