@@ -3,7 +3,7 @@ package russian_vocab_test
 import (
 	"testing"
 
-	"github.com/emoland/snowball/russian"
+	"github.com/eivindam/snowball/russian"
 )
 
 // Test a large set of words for which we know

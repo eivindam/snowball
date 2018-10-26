@@ -1,7 +1,7 @@
 package french
 
 import (
-	"github.com/emoland/snowball/snowballword"
+	"github.com/eivindam/snowball/snowballword"
 )
 
 func postprocess(word *snowballword.SnowballWord) {

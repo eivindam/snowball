@@ -1,7 +1,7 @@
 package russian
 
 import (
-	"github.com/emoland/snowball/snowballword"
+	"github.com/eivindam/snowball/snowballword"
 )
 
 // Step 4 is the undoubling of double non-vowel endings

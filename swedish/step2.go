@@ -1,7 +1,7 @@
 package swedish
 
 import (
-	"github.com/emoland/snowball/snowballword"
+	"github.com/eivindam/snowball/snowballword"
 )
 
 // Step 2: Search for one of the following suffixes in R1,

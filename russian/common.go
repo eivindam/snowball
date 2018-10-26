@@ -1,8 +1,8 @@
 package russian
 
 import (
-	"github.com/emoland/snowball/romance"
-	"github.com/emoland/snowball/snowballword"
+	"github.com/eivindam/snowball/romance"
+	"github.com/eivindam/snowball/snowballword"
 )
 
 // Checks if a rune is a lowercase Russian vowel.

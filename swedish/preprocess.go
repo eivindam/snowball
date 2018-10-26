@@ -1,7 +1,7 @@
 package swedish
 
 import (
-	"github.com/emoland/snowball/snowballword"
+	"github.com/eivindam/snowball/snowballword"
 )
 
 // Get the r1 of the word

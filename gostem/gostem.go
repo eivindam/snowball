@@ -7,7 +7,7 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"github.com/emoland/snowball"
+	"github.com/eivindam/snowball"
 	"io"
 	"log"
 	"os"

@@ -6,7 +6,7 @@ package romance
 
 import (
 	"fmt"
-	"github.com/emoland/snowball/snowballword"
+	"github.com/eivindam/snowball/snowballword"
 	"testing"
 )
 

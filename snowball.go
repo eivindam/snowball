@@ -3,11 +3,12 @@ package snowball
 import (
 	"fmt"
 
-	"github.com/emoland/snowball/english"
-	"github.com/emoland/snowball/french"
-	"github.com/emoland/snowball/russian"
-	"github.com/emoland/snowball/spanish"
-	"github.com/emoland/snowball/swedish"
+	"github.com/eivindam/snowball/english"
+	"github.com/eivindam/snowball/french"
+	"github.com/eivindam/snowball/russian"
+	"github.com/eivindam/snowball/spanish"
+	"github.com/eivindam/snowball/swedish"
+	"github.com/eivindam/snowball/norwegian"
 )
 
 const (
@@ -30,6 +31,8 @@ func Stem(word, language string, stemStopWords bool) (stemmed string, err error)
 		f = russian.Stem
 	case "swedish":
 		f = swedish.Stem
+	case "norwegian":
+		f = norwegian.Stem
 	default:
 		err = fmt.Errorf("Unknown language: %s", language)
 		return

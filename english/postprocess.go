@@ -1,7 +1,7 @@
 package english
 
 import (
-	"github.com/emoland/snowball/snowballword"
+	"github.com/eivindam/snowball/snowballword"
 )
 
 // Applies transformations necessary after
