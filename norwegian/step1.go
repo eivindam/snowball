@@ -32,15 +32,16 @@ func step1(w *snowballword.SnowballWord) bool {
 			switch w.RS[rsLen-2] {
 			case 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k',
 				'l', 'm', 'n', 'o', 'p', 'r', 't', 'v', 'y', 'z':
-				w.RemoveLastNRunes(len(suffixRunes))
+				w.RemoveLastNRunes(len(suffixRunes)-1)
 				return true
 			}
 		}
+
 		return false
 	}
 
-	// Remove the suffix
-	w.RemoveLastNRunes(len(suffixRunes))
+		// Remove the suffix
+		w.RemoveLastNRunes(len(suffixRunes))
 
 	// replace "erte" and "ert" with "er"
 	suffixes = []string{ "erte", "ert" }
