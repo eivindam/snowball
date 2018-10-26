@@ -49,7 +49,7 @@ func step1(w *snowballword.SnowballWord) bool {
 	suffix, suffixRunes = w.FirstSuffixIn(w.R1start, len(w.RS), suffixes...)
 
 	// If it is not in R1, do nothing
-	if suffix == "" || len(suffixRunes) > len(w.RS)-w.R1start {
+	if suffix == "" {
 		return false
 	}
 
