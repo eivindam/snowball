@@ -9,7 +9,7 @@ import (
 	"github.com/kljensen/snowball/russian"
 	"github.com/kljensen/snowball/spanish"
 	"github.com/kljensen/snowball/swedish"
-	"github.com/kljensen/emoland/norwegian"
+	"github.com/emoland/snowball/norwegian"
 )
 
 const (
