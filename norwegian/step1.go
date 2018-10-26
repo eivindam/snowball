@@ -13,7 +13,7 @@ func step1(w *snowballword.SnowballWord) bool {
 	suffixes := []string{
 		"hetenes", "hetene", "hetens", "endes", "heter", "heten", "ende",
 		"ande", "edes", "enes", "ene", "ane", "ets", "ers", "ede", "ast",
-		"ens", "het", "as", "es", "er", "ar", "en", "et", "e", "a",
+		"ens", "het", "as", "es", "er", "ar", "en", "et", "a", "e",
 	}
 
 	// Using FirstSuffixIn since there are overlapping suffixes, where some might not be in the R1,
