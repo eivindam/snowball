@@ -2,7 +2,6 @@ package norwegian
 
 import (
 	"strings"
-
 	"github.com/kljensen/snowball/snowballword"
 )
 
