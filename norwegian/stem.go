@@ -1,4 +1,4 @@
-package swedish
+package norwegian
 
 import (
 	"strings"

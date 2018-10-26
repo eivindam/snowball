@@ -2,7 +2,7 @@
 	Herein lie all the tests of the Swedish snowball stemmer.
 	TODO
 */
-package swedish
+package norwegian
 
 import (
 	"testing"
