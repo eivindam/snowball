@@ -9,9 +9,7 @@ import (
 // and, if found and in R1, perform the action indicated.
 
 // Delete:
-// lig, els & ig
-// Replace:
-// fullt: full, löst: lös
+// leg, els & ig
 
 func step3(w *snowballword.SnowballWord) bool {
 	// Possible sufficies for this step, longest first.
@@ -27,8 +25,7 @@ func step3(w *snowballword.SnowballWord) bool {
 	// Handle a suffix that was found, which is going
 	// to be replaced with a different suffix.
 	//
-	var repl string
-	repl = ""
+	var repl string = ""
 
 	w.ReplaceSuffixRunes(suffixRunes, []rune(repl), true)
 	return true

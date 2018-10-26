@@ -5,10 +5,10 @@ import (
 
 	"github.com/eivindam/snowball/english"
 	"github.com/eivindam/snowball/french"
+	"github.com/eivindam/snowball/norwegian"
 	"github.com/eivindam/snowball/russian"
 	"github.com/eivindam/snowball/spanish"
 	"github.com/eivindam/snowball/swedish"
-	"github.com/eivindam/snowball/norwegian"
 )
 
 const (
