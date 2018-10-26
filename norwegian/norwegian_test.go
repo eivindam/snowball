@@ -85,8 +85,8 @@ func runStepTest(t *testing.T, f stepFunc, tcs []stepTest) {
 func Test_step1(t *testing.T) {
 	var testCases = []stepTest{
 		{"høytidlighetene", 3, "høytidlig", "tidlig"},
-		{"øyets", 3, "øyets", "ts"},
-		{"ørets", 3, "ørets", "ts"},
+		{"øyets", 3, "øyet", "t"},
+		{"ørets", 3, "øret", "t"},
 	}
 	runStepTest(t, step1, testCases)
 }
@@ -121,6 +121,7 @@ func Test_Stem(t *testing.T) {
 		{"oppbygginga", true, "oppbygging"},
 		{"oppbyggingen", true, "oppbygging"},
 		{"oppdaterte", true, "oppdater"},
+		{"tredjepersons", true, "tredjeperson"},
 	}
 	for _, tc := range testCases {
 		stemmed := Stem(tc.in, tc.stemStopWords)
