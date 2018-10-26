@@ -13,7 +13,7 @@ func step1(w *snowballword.SnowballWord) bool {
 	suffixes := []string{
 		"hetenes", "hetene", "hetens", "endes", "heter", "heten", "ende",
 		"ande", "edes", "enes", "ene", "ane", "ets", "ers", "ede", "ast",
-		"ens", "het", "as", "es", "er", "ar", "en", "et", "a", "e",
+		"ens", "het", "as", "es", "er", "ar", "en", "et", "e", "a",
 	}
 
 	// Using FirstSuffixIn since there are overlapping suffixes, where some might not be in the R1,
@@ -38,7 +38,20 @@ func step1(w *snowballword.SnowballWord) bool {
 		}
 		return false
 	}
+
 	// Remove the suffix
 	w.RemoveLastNRunes(len(suffixRunes))
+
+	suffix, suffixRunes = w.FirstSuffix(
+        "erte", "ert",
+    )
+
+    // If it is not in R1, do nothing
+    if suffix == "" || len(suffixRunes) > len(w.RS)-w.R1start {
+        return false
+    }
+
+	w.ReplaceSuffixRunes(suffixRunes, []rune("er"), true)
+
 	return true
 }

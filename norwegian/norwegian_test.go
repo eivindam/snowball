@@ -19,7 +19,7 @@ func Test_stopWords(t *testing.T) {
 	knownTrueStopwords := [...]string{
 		"og",
 		"for",
-		"at",
+		"mye",
 		"ikke",
 	}
 	for _, word := range knownTrueStopwords {
@@ -47,10 +47,10 @@ func Test_r1(t *testing.T) {
 		word string
 		r1   string
 	}{
-		{"åpnet", "net"},
-		{"ordner", "mner"},
+		{"åpnet", "et"},
+		{"åpner", "er"},
 		{"hvems", "s"},
-		{"ørene", "ene"},
+		{"ørene", "ne"},
 		// Special cases below
 	}
 	for _, testCase := range wordTests {
@@ -84,9 +84,9 @@ func runStepTest(t *testing.T, f stepFunc, tcs []stepTest) {
 
 func Test_step1(t *testing.T) {
 	var testCases = []stepTest{
-		{"högtidligheterna", 3, "högtidlig", "tidlig"},
-		{"ögats", 3, "ögat", "t"},
-		{"ärade", 3, "ärad", "d"},
+		{"høytidlighetene", 3, "høytidlig", "tidlig"},
+		{"øyets", 3, "øyets", "ts"},
+		{"ørets", 3, "ørets", "ts"},
 	}
 	runStepTest(t, step1, testCases)
 }
@@ -109,25 +109,18 @@ func Test_Stem(t *testing.T) {
 		stemStopWords bool
 		out           string
 	}{
-		{"jaktkarlar", true, "jaktkarl"},
-		{"jaktkarlarne", true, "jaktkarl"},
-		{"klokaste", true, "klok"},
-		{"klokheten", true, "klok"},
-		{"friskt", true, "frisk"},
-		{"fröken", true, "frök"},
-		{"kloliknande", true, "klolikn"},
-		{"hopplöst", true, "hopplös"},
-		{"hopplöshet", true, "hopplös"},
-		{"årorna", true, "årorn"},
-		// {"skating", true, "skate"},
-		// {"fluently", true, "fluentli"},
-		// {"ied", true, "ie"},
-		// {"ies", true, "ie"},
-		// Stop words
-		{"vilkas", true, "vilk"},
-		{"vilkas", false, "vilkas"},
-		// {"above", true, "abov"},
-		// {"above", false, "above"},
+		{"havnedistrikt", true, "havnedistrikt"},
+		{"havnedistriktene", true, "havnedistrikt"},
+		{"havnedistrikter", true, "havnedistrikt"},
+		{"havnedistriktets", true, "havnedistrikt"},
+		{"havnedistriktets", true, "havnedistrikt"},
+		{"opp", true, "opp"},
+		{"oppad", true, "oppad"},
+		{"opning", true, "opning"},
+		{"havneinteresser", true, "havneinteress"},
+		{"oppbygginga", true, "oppbygging"},
+		{"oppbyggingen", true, "oppbygging"},
+		{"oppdaterte", true, "oppdater"},
 	}
 	for _, tc := range testCases {
 		stemmed := Stem(tc.in, tc.stemStopWords)

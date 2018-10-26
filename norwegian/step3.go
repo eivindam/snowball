@@ -12,7 +12,7 @@ func step3(w *snowballword.SnowballWord) bool {
 	// Possible sufficies for this step, longest first.
 	suffix, suffixRunes := w.FirstSuffixIn(w.R1start, len(w.RS),
 		"hetslov", "eleg", "elig", "elov", "slov",
-		"leg", "eig", "lig", "els", "lov", "ig"
+		"leg", "eig", "lig", "els", "lov", "ig",
 	)
 
 	// If it is not in R1, do nothing
