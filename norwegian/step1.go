@@ -17,7 +17,6 @@ func step1(w *snowballword.SnowballWord) bool {
 	}
 
 	// Using FirstSuffixIn since there are overlapping suffixes, where some might not be in the R1,
-	// while another might. For example: "ærende"
 	suffix, suffixRunes := w.FirstSuffixIn(w.R1start, len(w.RS), suffixes...)
 
 	// If it is not in R1, do nothing
@@ -27,8 +26,7 @@ func step1(w *snowballword.SnowballWord) bool {
 
 	if suffix == "s" {
 		// Delete if preceded by a valid s-ending. Valid s-endings inlude the
-		// following charaters: bcdfghjklmnoprtvy.
-		//
+		// following charaters: bcdfghjklmnoprtvyz.
 		rsLen := len(w.RS)
 		if rsLen >= 2 {
 			switch w.RS[rsLen-2] {

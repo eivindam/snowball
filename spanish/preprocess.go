@@ -1,7 +1,7 @@
 package spanish
 
 import (
-	"github.com/eivindam/snowball/snowballword"
+	"github.com/kljensen/snowball/snowballword"
 )
 
 func preprocess(word *snowballword.SnowballWord) {

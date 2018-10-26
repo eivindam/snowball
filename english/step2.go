@@ -1,7 +1,7 @@
 package english
 
 import (
-	"github.com/eivindam/snowball/snowballword"
+	"github.com/kljensen/snowball/snowballword"
 )
 
 // Step 2 is the stemming of various endings found in

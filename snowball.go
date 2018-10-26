@@ -3,12 +3,13 @@ package snowball
 import (
 	"fmt"
 
-	"github.com/eivindam/snowball/english"
-	"github.com/eivindam/snowball/french"
-	"github.com/eivindam/snowball/norwegian"
-	"github.com/eivindam/snowball/russian"
-	"github.com/eivindam/snowball/spanish"
-	"github.com/eivindam/snowball/swedish"
+	"github.com/kljensen/snowball/english"
+	"github.com/kljensen/snowball/french"
+	"github.com/kljensen/snowball/norwegian"
+	"github.com/kljensen/snowball/russian"
+	"github.com/kljensen/snowball/spanish"
+	"github.com/kljensen/snowball/swedish"
+	"github.com/kljensen/emoland/norwegian"
 )
 
 const (

@@ -1,8 +1,8 @@
 package spanish
 
 import (
-	"github.com/eivindam/snowball/romance"
-	"github.com/eivindam/snowball/snowballword"
+	"github.com/kljensen/snowball/romance"
+	"github.com/kljensen/snowball/snowballword"
 )
 
 // Change the vowels "áéíóú" into "aeiou".

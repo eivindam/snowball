@@ -10,8 +10,8 @@ for natural language processing.
 
 |                      |  Status                   |
 | -------------------- | ------------------------- |
-| Latest release       |  [v0.5.0](https://github.com/eivindam/snowball/tags) (2017-10-10) |
-| Latest build status  |  [![Build Status](https://travis-ci.org/eivindam/snowball.png)](https://travis-ci.org/eivindam/snowball)
+| Latest release       |  [v0.5.0](https://github.com/kljensen/snowball/tags) (2017-10-10) |
+| Latest build status  |  [![Build Status](https://travis-ci.org/kljensen/snowball.png)](https://travis-ci.org/kljensen/snowball)
 | Go versions tested   |  go1.7.4                 |
 | Languages available  |  English, Spanish (español), French (le français), Russian (ру́сский язы́к), Swedish (svenska)|
 | License              |  MIT                      |
@@ -27,7 +27,7 @@ to stem a single word.
 package main
 import (
 	"fmt"
-	"github.com/eivindam/snowball"
+	"github.com/kljensen/snowball"
 )
 func main(){
 	stemmed, err := snowball.Stem("Accumulations", "english", true)
@@ -114,7 +114,7 @@ I know of a few other stemmers availble in Go:
 
 ## Contributors
 
-* Kyle Jensen (eivindam@gmail.com, [@DataKyle](http://twitter.com/datakyle))
+* Kyle Jensen (kljensen@gmail.com, [@DataKyle](http://twitter.com/datakyle))
 * [Shawn Smith](https://github.com/shawnps)
 * [Herman Schaaf](https://github.com/hermanschaaf)
 * [Anton Södergren](https://github.com/AAAton)

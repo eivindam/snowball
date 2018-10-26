@@ -1,7 +1,7 @@
 package russian
 
 import (
-	"github.com/eivindam/snowball/romance"
+	"github.com/kljensen/snowball/romance"
 	"testing"
 )
 

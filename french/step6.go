@@ -1,7 +1,7 @@
 package french
 
 import (
-	"github.com/eivindam/snowball/snowballword"
+	"github.com/kljensen/snowball/snowballword"
 )
 
 // Step 6 Un-accent

@@ -1,7 +1,7 @@
 package russian
 
 import (
-	"github.com/eivindam/snowball/snowballword"
+	"github.com/kljensen/snowball/snowballword"
 )
 
 // Step 2 is the removal of the "и" suffix.

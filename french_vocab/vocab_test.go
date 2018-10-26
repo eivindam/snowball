@@ -3,7 +3,7 @@ package french_vocab_test
 import (
 	"testing"
 
-	"github.com/eivindam/snowball/french"
+	"github.com/kljensen/snowball/french"
 )
 
 // Test a large set of words for which we know
