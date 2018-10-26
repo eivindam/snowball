@@ -1,7 +1,7 @@
 package norwegian
 
 import (
-	"github.com/eivindam/snowball/romance"
+	"github.com/kljensen/snowball/romance"
 	"github.com/eivindam/snowball/snowballword"
 )
 
