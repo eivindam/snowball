@@ -33,7 +33,6 @@ func step1(w *snowballword.SnowballWord) bool {
 				return true
 			case 'k':
 				if !isLowerVowel(w.RS[rsLen-3]) {
-
 					w.RemoveLastNRunes(len(suffixRunes))
 					return true
 				}

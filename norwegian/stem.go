@@ -1,8 +1,8 @@
 package norwegian
 
 import (
-	"strings"
 	"github.com/kljensen/snowball/snowballword"
+	"strings"
 )
 
 // Stem a Norwegian word. This is the only exported
