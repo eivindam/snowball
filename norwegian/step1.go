@@ -19,11 +19,6 @@ func step1(w *snowballword.SnowballWord) bool {
 	// Using FirstSuffixIn since there are overlapping suffixes, where some might not be in the R1,
 	suffix, suffixRunes := w.FirstSuffixIn(w.R1start, len(w.RS), suffixes...)
 
-	// If it is not in R1, do nothing
-	if suffix == "" || len(suffixRunes) > len(w.RS)-w.R1start {
-		return false
-	}
-
 	if suffix == "s" {
 		// Delete if preceded by a valid s-ending. Valid s-endings inlude the
 		// following charaters: bcdfghjklmnoprtvyz.
@@ -46,14 +41,15 @@ func step1(w *snowballword.SnowballWord) bool {
 	w.RemoveLastNRunes(len(suffixRunes))
 
 	// replace "erte" and "ert" with "er"
-	suffixes = []string{ "erte", "ert" }
-
-	suffix, suffixRunes = w.FirstSuffixIn(w.R1start, len(w.RS), suffixes...)
+    suffix, suffixRunes = w.FirstSuffix(
+        "erte", "ert",
+    )
 
 	if suffix == "" || len(suffixRunes) > len(w.RS)-w.R1start {
 		return false
 	}
 
 	w.ReplaceSuffixRunes(suffixRunes, []rune("er"), true)
+
 	return true
 }
