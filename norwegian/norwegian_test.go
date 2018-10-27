@@ -123,6 +123,7 @@ func Test_Stem(t *testing.T) {
 		{"oppdaterte", true, "oppdater"},
 		{"tredjepersons", true, "tredjeperson"},
 		{"uspesisfisert", true, "uspesisfiser"},
+		{"voks", true, "voks"},
 	}
 	for _, tc := range testCases {
 		stemmed := Stem(tc.in, tc.stemStopWords)

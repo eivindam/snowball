@@ -19,33 +19,24 @@ func step1(w *snowballword.SnowballWord) bool {
 	// Using FirstSuffixIn since there are overlapping suffixes, where some might not be in the R1,
 	suffix, suffixRunes := w.FirstSuffixIn(w.R1start, len(w.RS), suffixes...)
 
-    if suffix == "" || len(suffixRunes) > len(w.RS)-w.R1start {
-		// replace "erte" and "ert" with "er"
-	    suffix, suffixRunes = w.FirstSuffix(
-	        "erte", "ert",
-	    )
-
-		if suffix == "" || len(suffixRunes) > len(w.RS)-w.R1start {
-			return false
-		}
-
-		w.ReplaceSuffixRunes(suffixRunes, []rune("er"), true)
-
-        return false
-    }
-
 	if suffix == "s" {
 		// Delete if preceded by a valid s-ending. Valid s-endings inlude the
-		// following charaters: bcdfghjklmnoprtvyz.
+		// following charaters: bcdfghjlmnoprtvyz or k not preceded by a vowel
 		rsLen := len(w.RS)
 
 		if rsLen >= 2 {
 			switch w.RS[rsLen-2] {
-			case 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k',
+			case 'b', 'c', 'd', 'f', 'g', 'h', 'j',
 				'l', 'm', 'n', 'o', 'p', 'r', 't', 'v', 'y', 'z':
 
 				w.RemoveLastNRunes(len(suffixRunes))
 				return true
+			case 'k':
+				if !isLowerVowel(w.RS[rsLen-3]) {
+
+					w.RemoveLastNRunes(len(suffixRunes))
+					return true
+				}
 			}
 		}
 
