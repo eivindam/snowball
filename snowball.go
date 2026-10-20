@@ -5,18 +5,18 @@ import (
 
 	"github.com/kljensen/snowball/english"
 	"github.com/kljensen/snowball/french"
+	"github.com/kljensen/snowball/hungarian"
+	"github.com/kljensen/snowball/norwegian"
 	"github.com/kljensen/snowball/russian"
 	"github.com/kljensen/snowball/spanish"
 	"github.com/kljensen/snowball/swedish"
-	"github.com/eivindam/snowball/norwegian"
 )
 
 const (
-	VERSION string = "v0.3.4"
+	VERSION string = "v0.7.0"
 )
 
 // Stem a word in the specified language.
-//
 func Stem(word, language string, stemStopWords bool) (stemmed string, err error) {
 
 	var f func(string, bool) string
@@ -33,6 +33,8 @@ func Stem(word, language string, stemStopWords bool) (stemmed string, err error)
 		f = swedish.Stem
 	case "norwegian":
 		f = norwegian.Stem
+	case "hungarian":
+		f = hungarian.Stem
 	default:
 		err = fmt.Errorf("Unknown language: %s", language)
 		return

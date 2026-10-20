@@ -1,8 +1,8 @@
 /*
-	Herein lie all the tests of the Snowball English stemmer.
+Herein lie all the tests of the Snowball English stemmer.
 
-	Many of the tests are drawn from cases where this implementation
-	did not match the results of the Python NLTK implementation.
+Many of the tests are drawn from cases where this implementation
+did not match the results of the Python NLTK implementation.
 */
 package english
 
@@ -15,7 +15,6 @@ import (
 
 // Test stopWords for things we know should be true
 // or false.
-//
 func Test_stopWords(t *testing.T) {
 
 	// Test true
@@ -26,7 +25,7 @@ func Test_stopWords(t *testing.T) {
 		"was",
 	}
 	for _, word := range knownTrueStopwords {
-		if isStopWord(word) == false {
+		if IsStopWord(word) == false {
 			t.Errorf("Expected %v, to be in stopWords", word)
 		}
 	}
@@ -39,7 +38,7 @@ func Test_stopWords(t *testing.T) {
 		"bullschnizzle",
 	}
 	for _, word := range knownFalseStopwords {
-		if isStopWord(word) == true {
+		if IsStopWord(word) == true {
 			t.Errorf("Expected %v, to be in stopWords", word)
 		}
 	}
@@ -47,7 +46,6 @@ func Test_stopWords(t *testing.T) {
 
 // Test specialWords for things we know should be present
 // and not present.
-//
 func Test_specialWords(t *testing.T) {
 
 	// Test true
